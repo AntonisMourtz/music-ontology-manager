@@ -1,0 +1,224 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://example.org/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://example.org/Band">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.org/Artists"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/Musical_Instruments"/>
+  <owl:Class rdf:about="http://example.org/Venue">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://example.org/Place"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/Studio">
+    <rdfs:subClassOf rdf:resource="http://example.org/Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/Person">
+    <rdfs:subClassOf rdf:resource="http://example.org/Artists"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/Song"/>
+  <owl:Class rdf:about="http://example.org/Label"/>
+  <owl:Class rdf:about="http://example.org/Year"/>
+  <owl:Class rdf:about="http://example.org/Album"/>
+  <owl:Class rdf:about="http://example.org/Recording"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Has_label"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Writer_of"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Singer_of"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Released"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Has_recording"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Producer_of"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Member_of"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Recorded"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Uses"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Has_album"/>
+  <owl:ObjectProperty rdf:about="http://example.org/Has_song"/>
+  <j.0:Label rdf:about="http://example.org/Vee_Jay"/>
+  <j.0:Person rdf:about="http://example.org/George_Harrison">
+    <j.0:Member_of>
+      <j.0:Band rdf:about="http://example.org/The_Beatles">
+        <j.0:Has_song>
+          <j.0:Song rdf:about="http://example.org/Boys">
+            <j.0:Has_recording>
+              <j.0:Recording rdf:about="http://example.org/B">
+                <j.0:Has_album>
+                  <j.0:Album rdf:about="http://example.org/Please_Please_Me">
+                    <j.0:Has_label>
+                      <j.0:Label rdf:about="http://example.org/Parlophone"/>
+                    </j.0:Has_label>
+                    <j.0:Recorded>
+                      <j.0:Studio rdf:about="http://example.org/EMI_Studios"/>
+                    </j.0:Recorded>
+                    <j.0:Released>
+                      <j.0:Year rdf:about="http://example.org/1963"/>
+                    </j.0:Released>
+                  </j.0:Album>
+                </j.0:Has_album>
+              </j.0:Recording>
+            </j.0:Has_recording>
+          </j.0:Song>
+        </j.0:Has_song>
+        <j.0:Has_song>
+          <j.0:Song rdf:about="http://example.org/Ask_Me_Why">
+            <j.0:Has_recording>
+              <j.0:Recording rdf:about="http://example.org/A">
+                <j.0:Has_album rdf:resource="http://example.org/Please_Please_Me"/>
+              </j.0:Recording>
+            </j.0:Has_recording>
+          </j.0:Song>
+        </j.0:Has_song>
+      </j.0:Band>
+    </j.0:Member_of>
+    <j.0:Uses>
+      <j.0:Musical_Instruments rdf:about="http://example.org/Electric_Guitar"/>
+    </j.0:Uses>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Ringo_Starr">
+    <j.0:Uses>
+      <j.0:Musical_Instruments rdf:about="http://example.org/Drums"/>
+    </j.0:Uses>
+    <j.0:Member_of rdf:resource="http://example.org/The_Beatles"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Freddie_Mercury">
+    <j.0:Singer_of>
+      <j.0:Album rdf:about="http://example.org/News_Of_The_World">
+        <j.0:Recorded>
+          <j.0:Studio rdf:about="http://example.org/Wessex_Sound"/>
+        </j.0:Recorded>
+        <j.0:Has_label>
+          <j.0:Label rdf:about="http://example.org/Elektra"/>
+        </j.0:Has_label>
+        <j.0:Has_label>
+          <j.0:Label rdf:about="http://example.org/EMI"/>
+        </j.0:Has_label>
+        <j.0:Recorded>
+          <j.0:Studio rdf:about="http://example.org/Sarm_East"/>
+        </j.0:Recorded>
+        <j.0:Released>
+          <j.0:Year rdf:about="http://example.org/1977"/>
+        </j.0:Released>
+      </j.0:Album>
+    </j.0:Singer_of>
+    <j.0:Writer_of>
+      <j.0:Song rdf:about="http://example.org/We_Are_The_Champions">
+        <j.0:Has_recording>
+          <j.0:Recording rdf:about="http://example.org/C">
+            <j.0:Has_album rdf:resource="http://example.org/News_Of_The_World"/>
+          </j.0:Recording>
+        </j.0:Has_recording>
+      </j.0:Song>
+    </j.0:Writer_of>
+    <j.0:Member_of>
+      <j.0:Band rdf:about="http://example.org/Queen">
+        <j.0:Has_song rdf:resource="http://example.org/We_Are_The_Champions"/>
+        <j.0:Producer_of rdf:resource="http://example.org/News_Of_The_World"/>
+        <j.0:Has_song>
+          <j.0:Song rdf:about="http://example.org/We_Will_Rock_You">
+            <j.0:Has_recording>
+              <j.0:Recording rdf:about="http://example.org/D3">
+                <j.0:Has_album>
+                  <j.0:Album rdf:about="http://example.org/Dragon_Attack_A_Tribute_To_Queen">
+                    <j.0:Recorded>
+                      <j.0:Studio rdf:about="http://example.org/Dream_Factory"/>
+                    </j.0:Recorded>
+                    <j.0:Recorded>
+                      <j.0:Studio rdf:about="http://example.org/Clamsville_Studio"/>
+                    </j.0:Recorded>
+                    <j.0:Has_label>
+                      <j.0:Label rdf:about="http://example.org/De_Rock_Records"/>
+                    </j.0:Has_label>
+                    <j.0:Released>
+                      <j.0:Year rdf:about="http://example.org/2003"/>
+                    </j.0:Released>
+                    <j.0:Recorded>
+                      <j.0:Studio rdf:about="http://example.org/The_Office_Studio"/>
+                    </j.0:Recorded>
+                    <j.0:Recorded>
+                      <j.0:Studio rdf:about="http://example.org/Deep_Cuttin_Studios"/>
+                    </j.0:Recorded>
+                    <j.0:Recorded>
+                      <j.0:Studio rdf:about="http://example.org/Work_Shop_Studio"/>
+                    </j.0:Recorded>
+                  </j.0:Album>
+                </j.0:Has_album>
+              </j.0:Recording>
+            </j.0:Has_recording>
+            <j.0:Has_recording>
+              <j.0:Recording rdf:about="http://example.org/D1">
+                <j.0:Has_album rdf:resource="http://example.org/News_Of_The_World"/>
+              </j.0:Recording>
+            </j.0:Has_recording>
+            <j.0:Has_recording>
+              <j.0:Recording rdf:about="http://example.org/D2">
+                <j.0:Has_album>
+                  <j.0:Album rdf:about="http://example.org/Live_A_Knebworth">
+                    <j.0:Recorded>
+                      <j.0:Venue rdf:about="http://example.org/Knebworth_House_England"/>
+                    </j.0:Recorded>
+                    <j.0:Has_label rdf:resource="http://example.org/EMI"/>
+                    <j.0:Released>
+                      <j.0:Year rdf:about="http://example.org/1997"/>
+                    </j.0:Released>
+                  </j.0:Album>
+                </j.0:Has_album>
+              </j.0:Recording>
+            </j.0:Has_recording>
+          </j.0:Song>
+        </j.0:Has_song>
+      </j.0:Band>
+    </j.0:Member_of>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/John_Lennon">
+    <j.0:Singer_of rdf:resource="http://example.org/Please_Please_Me"/>
+    <j.0:Uses>
+      <j.0:Musical_Instruments rdf:about="http://example.org/Acoustic_Guitar"/>
+    </j.0:Uses>
+    <j.0:Writer_of rdf:resource="http://example.org/Ask_Me_Why"/>
+    <j.0:Uses rdf:resource="http://example.org/Electric_Guitar"/>
+    <j.0:Member_of rdf:resource="http://example.org/The_Beatles"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Brian_May">
+    <j.0:Member_of rdf:resource="http://example.org/Queen"/>
+    <j.0:Writer_of rdf:resource="http://example.org/We_Will_Rock_You"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Paul_McCartney">
+    <j.0:Member_of rdf:resource="http://example.org/The_Beatles"/>
+    <j.0:Uses>
+      <j.0:Musical_Instruments rdf:about="http://example.org/Bass"/>
+    </j.0:Uses>
+    <j.0:Writer_of rdf:resource="http://example.org/Ask_Me_Why"/>
+    <j.0:Singer_of rdf:resource="http://example.org/Please_Please_Me"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Mike_Stone">
+    <j.0:Producer_of rdf:resource="http://example.org/News_Of_The_World"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Billy_Sherwood">
+    <j.0:Producer_of rdf:resource="http://example.org/Dragon_Attack_A_Tribute_To_Queen"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Paul_Shortino">
+    <j.0:Singer_of rdf:resource="http://example.org/Dragon_Attack_A_Tribute_To_Queen"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Roger_Taylor">
+    <j.0:Member_of rdf:resource="http://example.org/Queen"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/George_Martin">
+    <j.0:Producer_of rdf:resource="http://example.org/Please_Please_Me"/>
+  </j.0:Person>
+  <j.0:Studio rdf:about="http://example.org/Olympic_Studios"/>
+  <j.0:Person rdf:about="http://example.org/John_Deacon">
+    <j.0:Member_of rdf:resource="http://example.org/Queen"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Luther_Dixon">
+    <j.0:Writer_of rdf:resource="http://example.org/Boys"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Wes_Farrell">
+    <j.0:Writer_of rdf:resource="http://example.org/Boys"/>
+  </j.0:Person>
+  <j.0:Person rdf:about="http://example.org/Robbie_Williams">
+    <j.0:Singer_of rdf:resource="http://example.org/Live_A_Knebworth"/>
+  </j.0:Person>
+</rdf:RDF>
