@@ -42,6 +42,40 @@ Ontologies are stored in the `ontologies/` folder with the extension `.owl.` Exa
 
 ---
 
+## 📚 Ontology Overview
+
+The ontology organizes music-related data into classes and relationships to model real-world entities and their connections.
+
+### Classes
+- **Artists** – Represents all musical artists, divided into:
+  - **Person**: Individual musicians, singers, producers, etc.
+  - **Band**: Musical groups.
+- **Musical_Instruments** – All instruments used by artists.  
+- **Song** – All songs created.  
+- **Recording** – All recordings made for songs.  
+- **Album** – Albums associated with recordings.  
+- **Place** – Locations of recordings, with two subclasses:
+  - **Studio**: Recording studios.
+  - **Venue**: Live performance locations.  
+- **Label** – Record labels for albums.  
+- **Year** – Years in which albums were released.  
+
+### Object Properties
+Defines relationships between classes:  
+- **Has_album** – Connects recordings to albums.  
+- **Has_label** – Connects albums to labels.  
+- **Has_recording** – Connects songs to recordings.  
+- **Has_song** – Connects artists (bands or individuals) to their songs.  
+- **Member_of** – Connects individuals to bands.  
+- **Producer_of** – Connects albums to their producers.  
+- **Recorded** – Connects albums to studios or venues.  
+- **Released** – Connects albums to their release years.  
+- **Singer_of** – Connects individuals to albums they performed on.  
+- **Uses** – Connects individuals to the instruments they play.  
+- **Writer_of** – Connects individuals to the songs they wrote.  
+
+---
+
 ## 🔍 SPARQL Query Examples
 
 Below we provide some example **SPARQL queries** that can be executed directly within the system.  
